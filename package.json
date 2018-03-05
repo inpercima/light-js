@@ -15,8 +15,8 @@
     "node": ">=6.9.0"
   },
   "license": "MIT",
-  "name": "swaaplate-tools",
+  "name": "light-js",
   "private": true,
-  "repository": "https://github.com/inpercima/swaaplate-tools",
+  "repository": "https://github.com/inpercima/light-js",
   "version": "1.0.0-SNAPSHOT"
 }
