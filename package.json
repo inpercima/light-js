@@ -7,9 +7,9 @@
     }
   ],
   "description": " Simple tools to work together with swaaplate.",
-  "devDependencies": {
+  "dependencies": {
     "colors": "1.1.2",
-    "shelljs": "0.7.8"
+    "shelljs": "0.8.1"
   },
   "engines": {
     "node": ">=6.9.0"
