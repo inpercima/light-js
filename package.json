@@ -6,7 +6,7 @@
       "email": "inpercima@gmail.com"
     }
   ],
-  "description": " Simple tools to work together with swaaplate.",
+  "description": "Simple utils working with fs, shelljs and colors.",
   "dependencies": {
     "colors": "1.1.2",
     "shelljs": "0.8.1"
@@ -15,8 +15,9 @@
     "node": ">=6.9.0"
   },
   "license": "MIT",
+  "main": "index.js",
   "name": "light-js",
   "private": true,
   "repository": "https://github.com/inpercima/light-js",
-  "version": "1.0.0-SNAPSHOT"
+  "version": "0.1.0-SNAPSHOT"
 }

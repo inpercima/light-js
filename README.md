@@ -3,7 +3,7 @@
 [![dependencies Status](https://david-dm.org/inpercima/swaaplate-tools/status.svg)](https://david-dm.org/inpercima/swaaplate-tools)
 [![devDependencies Status](https://david-dm.org/inpercima/swaaplate-tools/dev-status.svg)](https://david-dm.org/inpercima/swaaplate-tools?type=dev)
 
-Simple tools to work together with swaaplate.
+Simple utils working with fs, shelljs and colors.
 
 # Prerequisites
 ## Node, npm or yarn
@@ -15,30 +15,28 @@ Simple tools to work together with swaaplate.
 
 ```
 # add to package.json
-"swaaplate-tools": "0.1.0"
+"light-js": "inpercima/light-js#0.1.0"
 ```
 
 # Usage
 
 ```
+const lightJs = require('light-js');
 
-
-const sTools = require('swaaplate-tools');
-
-# logging
-sTools.error('an error log.');
-sTools.info('an info log.');
-sTools.success('a success log.');
-sTools.warn('a warn log.');
+// logging
+lightJs.error('an error log.');
+lightJs.info('an info log.');
+lightJs.success('a success log.');
+lightJs.warn('a warn log.');
 
 // run command with yarn or npm
-sTools.yarnpm('-v');
+lightJs.yarnpm('-v');
 
 // run a command with options
-sTools.exec('docker', '-v', false);
-sTools.exec('yarn', '-v', false);
+lightJs.exec('docker', '-v', false);
+lightJs.exec('yarn', '-v', false);
 
-sTools.exec('not-existing-command', 'options', false);
+lightJs.exec('not-existing-command', 'options', false);
 
-sTools.exec('another-not-existing-command', 'options');
+lightJs.exec('another-not-existing-command', 'options');
 ```
