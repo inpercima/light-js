@@ -1,0 +1,22 @@
+{
+  "author": "Marcel Jänicke",
+  "contributors": [
+    {
+      "name": "Marcel Jänicke",
+      "email": "inpercima@gmail.com"
+    }
+  ],
+  "description": " Simple tools to work together with swaaplate.",
+  "devDependencies": {
+    "colors": "1.1.2",
+    "shelljs": "0.7.8"
+  },
+  "engines": {
+    "node": ">=6.9.0"
+  },
+  "license": "MIT",
+  "name": "swaaplate-tools",
+  "private": true,
+  "repository": "https://github.com/inpercima/swaaplate-tools",
+  "version": "1.0.0-SNAPSHOT"
+}
