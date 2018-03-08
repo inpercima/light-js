@@ -5,7 +5,7 @@ const colors = require('colors');
 const fs = require('fs');
 const shjs = require('shelljs');
 
-let lightJs = {};
+let lightjs = {};
 
 /* command section */
 let npmIsDefault = false;
@@ -14,11 +14,11 @@ function command(npmIsDefault) {
   return npmIsDefault ? 'npm' : 'yarn';
 }
 
-function exec(cmd, options, fail = true) {
+function exec(cmd, args, fail = true) {
   let cmdOnly = arguments.length === 1;
-  info('run ' + (cmdOnly ? `'${cmd}'` : `'${cmd} ${options}'`));
+  info('run ' + (cmdOnly ? `'${cmd}'` : `'${cmd} ${args}'`));
   if (shjs.which(cmd)) {
-    shjs.exec(cmdOnly ? cmd : `${cmd} ${options}`);
+    shjs.exec(cmdOnly ? cmd : `${cmd} ${args}`);
   } else {
     exit(cmd, fail);
   }
@@ -33,16 +33,16 @@ function exit(bin, fail) {
   }
 }
 
-function yarnpm(options) {
+function yarnpm(args) {
   let cmdOnly = arguments.length === 0;
   let cmd = command(npmIsDefault);
-  let exec = cmdOnly ? cmd : `${cmd} ${options}`;
+  let exec = cmdOnly ? cmd : `${cmd} ${args}`;
   info(`run '${exec}'`);
   if (shjs.which(cmd)) {
     shjs.exec(exec);
   } else {
     let checkCmd = this.command(!npmIsDefault);
-    exec = cmdOnly ? checkCommand : `${checkCmd} ${options}`;
+    exec = cmdOnly ? checkCommand : `${checkCmd} ${args}`;
     warn(`command '${cmd}' not found, try to run '${checkCmd}'...`);
     info(`run '${exec}'`);
     if (shjs.which(checkCmd)) {
@@ -53,8 +53,8 @@ function yarnpm(options) {
   }
 }
 
-lightJs.exec = exec;
-lightJs.yarnpm = yarnpm;
+lightjs.exec = exec;
+lightjs.yarnpm = yarnpm;
 
 /* logging section */
 function error(value) {
@@ -73,10 +73,10 @@ function warn(value) {
   shjs.echo(`[WARN   ] ${value}`.yellow);
 }
 
-lightJs.error = error;
-lightJs.info = info;
-lightJs.success = success;
-lightJs.warn = warn;
+lightjs.error = error;
+lightjs.info = info;
+lightjs.success = success;
+lightjs.warn = warn;
 
 /* file section */
 function readJson(filename) {
@@ -91,8 +91,8 @@ function writeFile(filename, data) {
   fs.writeFileSync(filename, data);
 }
 
-lightJs.readJson = readJson;
-lightJs.writeJson = writeJson;
-lightJs.writeJson = writeJson;
+lightjs.readJson = readJson;
+lightjs.writeJson = writeJson;
+lightjs.writeFile = writeFile;
 
-module.exports = lightJs;
+module.exports = lightjs;

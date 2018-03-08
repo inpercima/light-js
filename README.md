@@ -3,7 +3,7 @@
 [![dependencies Status](https://david-dm.org/inpercima/swaaplate-tools/status.svg)](https://david-dm.org/inpercima/swaaplate-tools)
 [![devDependencies Status](https://david-dm.org/inpercima/swaaplate-tools/dev-status.svg)](https://david-dm.org/inpercima/swaaplate-tools?type=dev)
 
-Simple utils working with fs, shelljs and colors.
+Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [colors](https://github.com/Marak/colors.js).
 
 # Prerequisites
 ## Node, npm or yarn
@@ -11,32 +11,99 @@ Simple utils working with fs, shelljs and colors.
   * `npm 5.6.0` or higher or
   * `yarn 1.3.0` or higher, used in this repository
 
-# Installation
+# Getting started
 
 ```
 # add to package.json
 "light-js": "inpercima/light-js#0.1.0"
+
+# define a constant in your js file
+const lightjs = require('light-js');
 ```
 
-# Usage
+# API
+## `error(message)`
+Logs an error message.
+* `message` an error message
 
+```javascript
+lightjs.error('an error message');
 ```
-const lightJs = require('light-js');
 
-// logging
-lightJs.error('an error log.');
-lightJs.info('an info log.');
-lightJs.success('a success log.');
-lightJs.warn('a warn log.');
+## `info(message)`
+Logs an info message.
+* `message` an info message
 
-// run command with yarn or npm
-lightJs.yarnpm('-v');
+```javascript
+lightjs.info('an info message');
+```
 
-// run a command with options
-lightJs.exec('docker', '-v', false);
-lightJs.exec('yarn', '-v', false);
+## `success(message)`
+Logs a success message.
+* `message` a success message
 
-lightJs.exec('not-existing-command', 'options', false);
+```javascript
+lightjs.success('a success message');
+```
 
-lightJs.exec('another-not-existing-command', 'options');
+## `warn(message)`
+Logs a warn message.
+* `message` a warn message
+
+```javascript
+lightjs.warn('a warn message');
+```
+
+## `yarnpm(arguments)`
+Run yarn or npm. It depends on what is installed on your system. Currently default is npm. Is it not installed, yarn will be run.
+If non of both is installed, an error message appears.
+This method will pass all arguments to the package manager and do not check if the arguments exists in the specified package manager.
+* `arguments` everything what can run in yarn or npm
+
+```javascript
+lightjs.yarnpm('-v');
+lightjs.yarnpm('run build');
+```
+
+## `exec(command, [arguments, [fail]])`
+Run a command with arguments. You can specify if the script should fail if the command does not exist.
+* `command` a command to run
+* `arguments` everything what can run in the specify command
+* `fail` true if the scripts should fail otherwise false,
+  * optional
+  * default is true
+
+```javascript
+lightjs.exec('docker', '-v', false);
+lightjs.exec('yarn', '-v', false);
+
+lightjs.exec('not-existing-command', 'arguments', false);
+
+lightjs.exec('another-not-existing-command', 'arguments');
+```
+
+## `readJson(filename)`
+Reads a json file and parse it as json.
+* `filename` the filename
+
+```javascript
+lightjs.readJson('path/to/file.json');
+```
+
+## `writeJson(filename, data)`
+Writes a json file.
+* `filename` the filename to save
+* `data` the object as json
+
+```javascript
+lightjs.writeJson('path/to/file.json', { "key": "value"});
+```
+
+## `writeFile(filename, data)`
+Writes a simple file.
+* `filename` the filename to save
+* `data` the data to save
+
+```javascript
+lightjs.writeFile('path/to/file', 'a simple text file');
 ```
