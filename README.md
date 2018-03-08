@@ -69,9 +69,10 @@ lightjs.yarnpm('run build');
 Run a command with arguments. You can specify if the script should fail if the command does not exist.
 * `command` a command to run
 * `arguments` everything what can run in the specify command
-* `fail` true if the scripts should fail otherwise false,
   * optional
-  * default is true
+* `fail` true if the scripts should fail otherwise false
+  * optional
+  * default: true
 
 ```javascript
 lightjs.exec('docker', '-v', false);
@@ -96,7 +97,7 @@ Writes a json file.
 * `data` the object as json
 
 ```javascript
-lightjs.writeJson('path/to/file.json', { "key": "value"});
+lightjs.writeJson('path/to/file.json', { "key": "value" });
 ```
 
 ## `writeFile(filename, data)`
