@@ -27,7 +27,7 @@ function exec(cmd, args, fail = true) {
 function exit(bin, fail) {
   if (fail) {
     error(`Sorry, this script requires '${bin}'.`);
-    exit(1);
+    shjs.exit(1);
   } else {
     warn(`This script requires '${bin}' but it keeps going.`);
   }
