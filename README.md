@@ -22,6 +22,17 @@ const lightjs = require('light-js');
 ```
 
 # API
+## Table of contents
+* [error(message)](#errormessage)
+* [info(message)](#infomessage)
+* [success(message)](#successmessage)
+* [warn(message)](#warnmessage)
+* [yarnpm(arguments)](#yarnpmarguments)
+* [exec(command, [arguments, [fail]])](#execcommand-arguments-fail)
+* [readJson(filename)](#readjsonfilename)
+* [writeJson(filename, data)](#writejsonfilename-data)
+* [writeFile(filename, data)](#writefilefilename-data)
+
 ## `error(message)`
 Logs an error message.
 * `message` an error message
