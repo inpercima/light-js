@@ -8,11 +8,11 @@
   ],
   "description": "Simple utils working with fs, shelljs and colors.",
   "dependencies": {
-    "colors": "1.1.2",
-    "shelljs": "0.8.1"
+    "colors": "1.3.0",
+    "shelljs": "0.8.2"
   },
   "engines": {
-    "node": ">=6.9.0"
+    "node": ">=8.11.3"
   },
   "files": [
     "index.js"

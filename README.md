@@ -7,9 +7,9 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 # Prerequisites
 ## Node, npm or yarn
-* `node 6.9.0` or higher in combination with
+* `node 8.11.3` or higher in combination with
   * `npm 5.6.0` or higher or
-  * `yarn 1.3.0` or higher, used in this repository
+  * `yarn 1.7.0` or higher, used in this repository
 
 # Getting started
 
