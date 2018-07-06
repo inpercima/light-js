@@ -5,13 +5,13 @@
 
 Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [colors](https://github.com/Marak/colors.js).
 
-# Prerequisites
-## Node, npm or yarn
+## Prerequisites
+### Node, npm or yarn
 * `node 8.11.3` or higher in combination with
   * `npm 5.6.0` or higher or
   * `yarn 1.7.0` or higher, used in this repository
 
-# Getting started
+## Getting started
 
 ```
 # add to package.json
@@ -21,8 +21,8 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 const lightjs = require('light-js');
 ```
 
-# API
-## Table of contents
+## API
+### Table of contents
 * [error(message)](#errormessage)
 * [info(message)](#infomessage)
 * [success(message)](#successmessage)
@@ -33,7 +33,7 @@ const lightjs = require('light-js');
 * [writeJson(filename, data)](#writejsonfilename-data)
 * [writeFile(filename, data)](#writefilefilename-data)
 
-## `error(message)`
+### `error(message)`
 Logs an error message.
 * `message` an error message
 
@@ -41,7 +41,7 @@ Logs an error message.
 lightjs.error('an error message');
 ```
 
-## `info(message)`
+### `info(message)`
 Logs an info message.
 * `message` an info message
 
@@ -49,7 +49,7 @@ Logs an info message.
 lightjs.info('an info message');
 ```
 
-## `success(message)`
+### `success(message)`
 Logs a success message.
 * `message` a success message
 
@@ -57,7 +57,7 @@ Logs a success message.
 lightjs.success('a success message');
 ```
 
-## `warn(message)`
+### `warn(message)`
 Logs a warn message.
 * `message` a warn message
 
@@ -65,7 +65,7 @@ Logs a warn message.
 lightjs.warn('a warn message');
 ```
 
-## `yarnpm(arguments)`
+### `yarnpm(arguments)`
 Run yarn or npm. It depends on what is installed on your system. Currently default is npm. Is it not installed, yarn will be run.
 If non of both is installed, an error message appears.
 This method will pass all arguments to the package manager and do not check if the arguments exists in the specified package manager.
@@ -76,7 +76,7 @@ lightjs.yarnpm('-v');
 lightjs.yarnpm('run build');
 ```
 
-## `exec(command, [arguments, [fail]])`
+### `exec(command, [arguments, [fail]])`
 Run a command with arguments. You can specify if the script should fail if the command does not exist.
 * `command` a command to run
 * `arguments` everything what can run in the specify command
@@ -94,7 +94,7 @@ lightjs.exec('not-existing-command', 'arguments', false);
 lightjs.exec('another-not-existing-command', 'arguments');
 ```
 
-## `readJson(filename)`
+### `readJson(filename)`
 Reads a json file and parse it as json.
 * `filename` the filename
 
@@ -102,7 +102,7 @@ Reads a json file and parse it as json.
 lightjs.readJson('path/to/file.json');
 ```
 
-## `writeJson(filename, data)`
+### `writeJson(filename, data)`
 Writes a json file.
 * `filename` the filename to save
 * `data` the object as json
@@ -111,7 +111,7 @@ Writes a json file.
 lightjs.writeJson('path/to/file.json', { "key": "value" });
 ```
 
-## `writeFile(filename, data)`
+### `writeFile(filename, data)`
 Writes a simple file.
 * `filename` the filename to save
 * `data` the data to save
