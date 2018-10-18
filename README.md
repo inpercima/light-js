@@ -4,7 +4,7 @@
 [![dependencies Status](https://david-dm.org/inpercima/swaaplate-tools/status.svg)](https://david-dm.org/inpercima/swaaplate-tools)
 [![devDependencies Status](https://david-dm.org/inpercima/swaaplate-tools/dev-status.svg)](https://david-dm.org/inpercima/swaaplate-tools?type=dev)
 
-Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [colors](https://github.com/Marak/colors.js).
+Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [replace](https://github.com/ALMaclaine/replace).
 
 ## Prerequisites
 
@@ -18,7 +18,7 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 ```bash
 # add to package.json
-"light-js": "inpercima/light-js#0.1.1"
+"light-js": "inpercima/light-js#0.2.0"
 
 # define a constant in your js file
 const lightjs = require('light-js');
@@ -35,6 +35,7 @@ const lightjs = require('light-js');
 * [yarnpm(arguments)](#yarnpmarguments)
 * [exec(command, [arguments, [fail]])](#execcommand-arguments-fail)
 * [readJson(filename)](#readjsonfilename)
+* [replacement(regex, replacement, paths, [recursive])](#replacementregex-replacement-paths-recursive)
 * [writeJson(filename, data)](#writejsonfilename-data)
 * [writeFile(filename, data)](#writefilefilename-data)
 
@@ -116,6 +117,15 @@ Reads a json file and parse it as json.
 
 ```javascript
 lightjs.readJson('path/to/file.json');
+```
+
+### `replacement(regex, replacement, paths, [recursive])`
+
+Replaces a text or a regex in specific files, recursive or not in silent mode.
+
+```javascript
+lightjs.replacement('loginForm', `anotherForm`, ['path/of/file'] });
+lightjs.replacement('loginForm', `anotherForm`, ['path/of/dir'], true });
 ```
 
 ### `writeJson(filename, data)`

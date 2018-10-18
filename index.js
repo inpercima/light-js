@@ -1,8 +1,8 @@
 'use strict';
 
 /* requirements */
-const colors = require('colors');
 const fs = require('fs');
+const replace = require('replace');
 const shjs = require('shelljs');
 
 let lightjs = {};
@@ -91,7 +91,12 @@ function writeFile(filename, data) {
   fs.writeFileSync(filename, data);
 }
 
+function replacement(regex, replacement, paths, recursive = false) {
+  replace({ regex: regex, replacement: replacement, paths: [paths], silent: true, recursive: recursive });
+}
+
 lightjs.readJson = readJson;
+lightjs.replacement = replacement;
 lightjs.writeJson = writeJson;
 lightjs.writeFile = writeFile;
 
