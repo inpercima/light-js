@@ -132,7 +132,7 @@ Replaces a string or a regex in specific files, recursive or not with silent mod
 
 * `regex` a simple string or regex
 * `replacement` string for replace
-* `path` a path as string or paths as an array for replacement
+* `paths` paths as an array for replacement
 * `silent` true if no output should be done otherwise false
   * optional
   * default: true
@@ -141,9 +141,9 @@ Replaces a string or a regex in specific files, recursive or not with silent mod
   * default: false
 
 ```javascript
-lightjs.replacement('loginForm', `anotherForm`, 'path/of/file');
-lightjs.replacement('loginForm', `anotherForm`, 'path/of/dir', false });
-lightjs.replacement('loginForm', `anotherForm`, ['path/of/dir1', 'path/of/dir2'], false, true);
+lightjs.replacement('loginForm', `anotherForm`, ['path/to/file']);
+lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir'], false });
+lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir1', 'path/to/dir2'], false, true);
 ```
 
 ### `writeJson(filename, data)`
