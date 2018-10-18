@@ -92,7 +92,7 @@ function writeFile(filename, data) {
 }
 
 function replacement(regex, replacement, path, siltent = true, recursive = false) {
-  replace({ regex: regex, replacement: replacement, path: path, silent: siltent, recursive: recursive });
+  replace({ regex: regex, replacement: replacement, paths: path, silent: siltent, recursive: recursive });
 }
 
 lightjs.readJson = readJson;
