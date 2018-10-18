@@ -91,8 +91,8 @@ function writeFile(filename, data) {
   fs.writeFileSync(filename, data);
 }
 
-function replacement(regex, replacement, paths, recursive = false) {
-  replace({ regex: regex, replacement: replacement, paths: [paths], silent: true, recursive: recursive });
+function replacement(regex, replacement, path, siltent = true, recursive = false) {
+  replace({ regex: regex, replacement: replacement, path: path, silent: siltent, recursive: recursive });
 }
 
 lightjs.readJson = readJson;
