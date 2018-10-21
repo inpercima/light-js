@@ -8,10 +8,14 @@ const shjs = require('shelljs');
 let lightjs = {};
 
 /* command section */
-let npmIsDefault = false;
+let isNpmDefault = false;
 
-function command(npmIsDefault) {
-  return npmIsDefault ? 'npm' : 'yarn';
+function setNpmDefault(npm) {
+  isNpmDefault = npm;
+}
+
+function yarnpmCmd(isNpmDefault) {
+  return isNpmDefault ? 'npm' : 'yarn';
 }
 
 function exec(cmd, args, fail = true) {
@@ -35,13 +39,13 @@ function exit(bin, fail) {
 
 function yarnpm(args) {
   let cmdOnly = arguments.length === 0;
-  let cmd = command(npmIsDefault);
+  let cmd = yarnpmCmd(isNpmDefault);
   let exec = cmdOnly ? cmd : `${cmd} ${args}`;
   info(`run '${exec}'`);
   if (shjs.which(cmd)) {
     shjs.exec(exec);
   } else {
-    let checkCmd = this.command(!npmIsDefault);
+    let checkCmd = yarnpmCmd(!isNpmDefault);
     exec = cmdOnly ? checkCommand : `${checkCmd} ${args}`;
     warn(`command '${cmd}' not found, try to run '${checkCmd}'...`);
     info(`run '${exec}'`);
@@ -54,6 +58,7 @@ function yarnpm(args) {
 }
 
 lightjs.exec = exec;
+lightjs.setNpmDefault = setNpmDefault;
 lightjs.yarnpm = yarnpm;
 
 /* logging section */
