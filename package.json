@@ -1,18 +1,16 @@
 {
   "author": "Marcel Jänicke",
-  "contributors": [
-    {
+  "contributors": [{
       "name": "Marcel Jänicke",
       "email": "inpercima@gmail.com"
-    }
-  ],
+    }],
   "description": "Simple utils working with fs, shelljs and colors.",
   "dependencies": {
-    "replace": "1.0.0",
-    "shelljs": "0.8.2"
+    "replace": "1.1.1",
+    "shelljs": "0.8.3"
   },
   "engines": {
-    "node": ">=8.11.3"
+    "node": ">=12.3.1"
   },
   "files": [
     "index.js"

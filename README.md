@@ -1,8 +1,8 @@
 # light-js
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
-[![dependencies Status](https://david-dm.org/inpercima/swaaplate-tools/status.svg)](https://david-dm.org/inpercima/swaaplate-tools)
-[![devDependencies Status](https://david-dm.org/inpercima/swaaplate-tools/dev-status.svg)](https://david-dm.org/inpercima/swaaplate-tools?type=dev)
+[![dependencies Status](https://david-dm.org/inpercima/light-js/status.svg)](https://david-dm.org/inpercima/light-js)
+[![devDependencies Status](https://david-dm.org/inpercima/light-js/dev-status.svg)](https://david-dm.org/inpercima/light-js?type=dev)
 
 Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [replace](https://github.com/ALMaclaine/replace).
 
@@ -10,15 +10,15 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 ### Node, npm or yarn
 
-* `node 8.11.3` or higher in combination with
-  * `npm 5.6.0` or higher or
-  * `yarn 1.7.0` or higher, used in this repository
+* `node 12.3.1` or higher in combination with
+  * `npm 6.12.1` or higher or
+  * `yarn 1.19.1` or higher, used in this repository
 
 ## Getting started
 
 ```bash
 # add to package.json
-"light-js": "inpercima/light-js#0.2.0"
+"light-js": "inpercima/light-js#0.2.2"
 
 # define a constant in your js file
 const lightjs = require('light-js');
