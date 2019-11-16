@@ -5,7 +5,7 @@ const fs = require('fs');
 const replace = require('replace');
 const shjs = require('shelljs');
 
-let lightjs = {};
+const lightjs = {};
 
 /* command section */
 let isNpmDefault = false;
