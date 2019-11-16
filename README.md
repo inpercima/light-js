@@ -3,6 +3,7 @@
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 [![dependencies Status](https://david-dm.org/inpercima/light-js/status.svg)](https://david-dm.org/inpercima/light-js)
 [![devDependencies Status](https://david-dm.org/inpercima/light-js/dev-status.svg)](https://david-dm.org/inpercima/light-js?type=dev)
+[![Github Action](https://github.com/inpercima/light-js/workflows/CI/badge.svg)
 
 Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [replace](https://github.com/ALMaclaine/replace).
 
