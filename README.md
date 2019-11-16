@@ -19,7 +19,7 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 ```bash
 # add to package.json
-"light-js": "inpercima/light-js#0.2.2"
+"light-js": "inpercima/light-js#0.2.3"
 
 # define a constant in your js file
 const lightjs = require('light-js');
