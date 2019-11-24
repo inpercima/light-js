@@ -18,7 +18,22 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 ## Getting started
 
 ```bash
-# add to package.json
+# clone project
+git clone https://github.com/inpercima/light-js.git
+cd light-js
+```
+
+## Usage
+
+```bash
+# test
+yarn test
+```
+
+## Install
+
+```json
+# add light-js to your project, mostly in package.json and install with your preferred package manager
 "light-js": "inpercima/light-js#0.2.3"
 
 # define a constant in your js file
