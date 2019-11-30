@@ -30,9 +30,10 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - run: |
+      - name: Deploy to Github Package Registry
+        run: |
           yarn install
           yarn test
           yarn publish
-      - env:
+        env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
