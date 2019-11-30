@@ -33,9 +33,10 @@ jobs:
           node-version: ${{ matrix.node-version }}
           registry-url: https://npm.pkg.github.com/
           scope: '@inpercima'
-      - run: npm install -g yarn  
+      - run: npm install -g yarn
       - run: |
           yarn install
           yarn test
+          yarn publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}

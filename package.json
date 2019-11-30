@@ -23,6 +23,9 @@
   "main": "index.js",
   "name": "light-js",
   "private": true,
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/inpercima/light-js.git"
