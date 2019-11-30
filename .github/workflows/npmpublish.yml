@@ -33,6 +33,6 @@ jobs:
       - run: |
           yarn install
           yarn test
-          yarn publish
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
