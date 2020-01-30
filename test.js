@@ -2,7 +2,7 @@
 
 /* requirements */
 const assert = require('assert');
-  // test not exported function with rewire
+  // to test not exported functions in a lib, use rewire
 const rewire = require('rewire');
 
 const lightjs = rewire('./index');
