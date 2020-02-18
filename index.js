@@ -1,6 +1,7 @@
 'use strict';
 
 /* requirements */
+const colors = require('colors');
 const fs = require('fs');
 const replace = require('replace');
 const shjs = require('shelljs');

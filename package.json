@@ -6,6 +6,7 @@
     }],
   "description": "Simple utils working with fs, shelljs and colors.",
   "dependencies": {
+    "colors": "1.4.0",
     "replace": "1.1.5",
     "shelljs": "0.8.3"
   },

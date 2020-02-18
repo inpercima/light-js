@@ -51,7 +51,7 @@ const lightjs = require('light-js');
 * [yarnpm(arguments)](#yarnpmarguments)
 * [exec(command [, arguments] [, fail])](#execcommand--arguments--fail)
 * [readJson(filename)](#readjsonfilename)
-* [replacement(regex, replacement, paths [, silent] [, recursive] [,exclude])](#replacementregex-replacement-paths--silent--recursive--exclude)
+* [replacement(regex, replacement, paths [, silent] [, recursive] [, exclude])](#replacementregex-replacement-paths--silent--recursive--exclude)
 * [writeJson(filename, data)](#writejsonfilename-data)
 * [writeFile(filename, data)](#writefilefilename-data)
 
@@ -142,7 +142,7 @@ Reads a json file and parse it as json.
 lightjs.readJson('path/to/file.json');
 ```
 
-### `replacement(regex, replacement, paths [, silent] [, recursive] [,exclude])`
+### `replacement(regex, replacement, paths [, silent] [, recursive] [, exclude])`
 
 Replaces a string or a regex in specific files, recursive or not with silent mode if desired.
 
