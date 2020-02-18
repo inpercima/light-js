@@ -49,9 +49,9 @@ const lightjs = require('light-js');
 * [success(message)](#successmessage)
 * [warn(message)](#warnmessage)
 * [yarnpm(arguments)](#yarnpmarguments)
-* [exec(command, [arguments, [fail]])](#execcommand-arguments-fail)
+* [exec(command [, arguments] [, fail])](#execcommand--arguments--fail)
 * [readJson(filename)](#readjsonfilename)
-* [replacement(regex, replacement, paths, [silent, [recursive]])](#replacementregex-replacement-paths-silent-recursive)
+* [replacement(regex, replacement, paths [, silent] [, recursive] [,exclude])](#replacementregex-replacement-paths--silent--recursive--exclude)
 * [writeJson(filename, data)](#writejsonfilename-data)
 * [writeFile(filename, data)](#writefilefilename-data)
 
@@ -111,7 +111,7 @@ lightjs.yarnpm('-v');
 lightjs.yarnpm('run build');
 ```
 
-### `exec(command, [arguments, [fail]])`
+### `exec(command [, arguments] [, fail])`
 
 Run a command with arguments.
 You can specify if the script should fail if the command does not exist.
@@ -142,7 +142,7 @@ Reads a json file and parse it as json.
 lightjs.readJson('path/to/file.json');
 ```
 
-### `replacement(regex, replacement, paths, [silent, [recursive]])`
+### `replacement(regex, replacement, paths [, silent] [, recursive] [,exclude])`
 
 Replaces a string or a regex in specific files, recursive or not with silent mode if desired.
 
@@ -155,11 +155,15 @@ Replaces a string or a regex in specific files, recursive or not with silent mod
 * `recursive` true if the replacement should be recursive otherwise false
   * optional
   * default: false
+* `exclude` comma separated string of excludes dirs or files
+  * optional
+  * default: ''
 
 ```javascript
 lightjs.replacement('loginForm', `anotherForm`, ['path/to/file']);
 lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir'], false });
 lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir1', 'path/to/dir2'], false, true);
+lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir1', 'path/to/dir2'], false, true, 'node_modules');
 ```
 
 ### `writeJson(filename, data)`
