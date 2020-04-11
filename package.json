@@ -11,11 +11,11 @@
     "shelljs": "0.8.3"
   },
   "devDependencies": {
-    "mocha": "7.0.1",
-    "rewire": "4.0.1"
+    "mocha": "7.1.1",
+    "rewire": "5.0.0"
   },
   "engines": {
-    "node": ">=12.16.0"
+    "node": ">=12.16.1"
   },
   "files": [
     "index.js"
@@ -29,6 +29,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/inpercima/light-js.git"
+  },
+  "resolutions": {
+    "mkdirp": "0.5.3"
   },
   "scripts": {
     "test": "mocha"
