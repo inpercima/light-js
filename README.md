@@ -11,9 +11,9 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 ### Node, npm or yarn
 
-* `node 12.16.0` or higher in combination with
+* `node 12.16.1` or higher in combination with
   * `npm 6.13.4` or higher or
-  * `yarn 1.22.0` or higher, used in this repository
+  * `yarn 1.22.4` or higher, used in this repository
 
 ## Getting started
 
