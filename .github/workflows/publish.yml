@@ -28,7 +28,7 @@ jobs:
         scope: '@inpercima'
     - name: Deploy to Github Package Registry
       run: |
-        yarn
-        yarn publish
+        nmp ci
+        npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
