@@ -11,7 +11,7 @@
     "shelljs": "0.8.4"
   },
   "devDependencies": {
-    "mocha": "7.1.1",
+    "mocha": "7.2.0",
     "rewire": "5.0.0"
   },
   "engines": {
@@ -29,9 +29,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/inpercima/light-js.git"
-  },
-  "resolutions": {
-    "mkdirp": "0.5.3"
   },
   "scripts": {
     "test": "mocha"
