@@ -7,15 +7,15 @@
   "description": "Simple utils working with fs, shelljs and colors.",
   "dependencies": {
     "colors": "1.4.0",
-    "replace": "1.2.0",
+    "replace": "1.2.1",
     "shelljs": "0.8.4"
   },
   "devDependencies": {
-    "mocha": "7.2.0",
+    "mocha": "9.0.2",
     "rewire": "5.0.0"
   },
   "engines": {
-    "node": ">=12.16.1"
+    "node": ">=14.16.1"
   },
   "files": [
     "index.js"

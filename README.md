@@ -11,9 +11,9 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 ### Node, npm or yarn
 
-* `node 12.16.1` or higher in combination with
-  * `npm 6.13.4` or higher or
-  * `yarn 1.22.4` or higher, used in this repository
+* `node 14.16.1` or higher in combination with
+  * `npm 6.14.12` or higher or
+  * `yarn 1.22.5` or higher, used in this repository
 
 ## Getting started
 
@@ -34,7 +34,7 @@ yarn test
 
 ```json
 # add light-js to your project, mostly in package.json and install with your preferred package manager
-"light-js": "inpercima/light-js#0.2.3"
+"light-js": "inpercima/light-js#1.1.3"
 
 # define a constant in your js file
 const lightjs = require('light-js');
