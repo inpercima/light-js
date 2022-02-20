@@ -11,7 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Setup node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: '16.x'
   publish-gpr:
@@ -21,14 +21,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Setup node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: '16.x'
         registry-url: 'https://npm.pkg.github.com'
         scope: '@inpercima'
-    - name: Install dependencies
+    - name: Install
       run: yarn
-    - name: Deploy to Github Package Registry
+    - name: Deploy
       run: yarn publish
       env:
         NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
