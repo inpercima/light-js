@@ -1,4 +1,5 @@
 # light-js
+
 ![MIT license](https://img.shields.io/github/license/inpercima/light-js?color=blue)
 ![Release Version](https://img.shields.io/github/v/release/inpercima/light-js)
 [![Node CI/CD](https://github.com/inpercima/light-js/actions/workflows/ci.yml/badge.svg)](https://github.com/inpercima/light-js/actions/workflows/ci.yml)
