@@ -15,7 +15,7 @@
     "rewire": "6.0.0"
   },
   "engines": {
-    "node": ">=16.13.0"
+    "node": ">=16.16.0"
   },
   "files": [
     "index.js"

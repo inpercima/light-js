@@ -1,6 +1,6 @@
 # light-js
-
-[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
+![MIT license](https://img.shields.io/github/license/inpercima/light-js?color=blue)
+![Release Version](https://img.shields.io/github/v/release/inpercima/light-js)
 [![Node CI/CD](https://github.com/inpercima/light-js/actions/workflows/ci.yml/badge.svg)](https://github.com/inpercima/light-js/actions/workflows/ci.yml)
 
 Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [replace](https://github.com/ALMaclaine/replace).
@@ -9,9 +9,9 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 ### Node, npm or yarn
 
-* `node 16.13.0` or higher in combination with
-  * `npm 8.1.0` or higher or
-  * `yarn 1.22.11` or higher, used in this repository
+* `node 16.16.0` or higher in combination with
+  * `npm 8.12.2` or higher or
+  * `yarn 1.22.19` or higher, used in this repository
 
 ## Getting started
 
@@ -32,7 +32,7 @@ yarn test
 
 ```json
 # add light-js to your project, mostly in package.json and install with your preferred package manager
-"light-js": "inpercima/light-js#1.1.3"
+"light-js": "inpercima/light-js#1.1.5"
 
 # define a constant in your js file
 const lightjs = require('light-js');
