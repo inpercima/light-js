@@ -1,8 +1,8 @@
 # light-js
 
-![MIT license](https://img.shields.io/github/license/inpercima/light-js?color=blue)
+[![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 ![Release Version](https://img.shields.io/github/v/release/inpercima/light-js)
-[![Node CI/CD](https://github.com/inpercima/light-js/actions/workflows/ci.yml/badge.svg)](https://github.com/inpercima/light-js/actions/workflows/ci.yml)
+[![Node CI](https://github.com/inpercima/light-js/actions/workflows/ci.yml/badge.svg)](https://github.com/inpercima/light-js/actions/workflows/ci.yml)
 
 Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [replace](https://github.com/ALMaclaine/replace).
 
