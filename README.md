@@ -33,7 +33,7 @@ yarn test
 
 ```json
 # add light-js to your project, mostly in package.json and install with your preferred package manager
-"light-js": "inpercima/light-js#1.1.5"
+"light-js": "inpercima/light-js#1.1.7"
 
 # define a constant in your js file
 const lightjs = require('light-js');
