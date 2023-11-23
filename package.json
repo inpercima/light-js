@@ -1,7 +1,7 @@
 {
-  "author": "Marcel Jänicke",
+  "author": "Marcel Hendrich",
   "contributors": [{
-      "name": "Marcel Jänicke",
+      "name": "Marcel Hendrich",
       "email": "inpercima@gmail.com"
     }],
   "description": "Simple utils working with fs, shelljs and colors.",
