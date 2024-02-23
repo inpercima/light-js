@@ -11,7 +11,7 @@
     "shelljs": "0.8.5"
   },
   "devDependencies": {
-    "mocha": "10.2.0",
+    "mocha": "10.3.0",
     "rewire": "7.0.0"
   },
   "engines": {
