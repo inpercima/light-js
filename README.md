@@ -8,11 +8,11 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 ## Prerequisites
 
-### Node, npm or yarn
+### Node, npm or pnpm
 
 * `node 20.15.1` or higher in combination with
   * `npm 10.7.0` or higher or
-  * `yarn 1.22.19` or higher, used in this repository
+  * `pnpm 9.11.0` or higher, used in this repository
 
 ## Getting started
 
@@ -26,7 +26,7 @@ cd light-js
 
 ```bash
 # test
-yarn test
+pnpm test
 ```
 
 ## Install
