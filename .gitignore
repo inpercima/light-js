@@ -1,12 +1,5 @@
-# begin project specific
-
-# ignore all in '.vscode' b/c some vsc config files contain user specific content
-.vscode/*
-
-# end project specific
-
-# Created by https://www.toptal.com/developers/gitignore/api/node,eclipse,intellij+all
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,eclipse,intellij+all
+# Created by https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,eclipse,intellij+all
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,visualstudiocode,eclipse,intellij+all
 
 ### Eclipse ###
 .metadata
@@ -302,4 +295,23 @@ dist
 # SvelteKit build / generate output
 .svelte-kit
 
-# End of https://www.toptal.com/developers/gitignore/api/node,eclipse,intellij+all
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode,eclipse,intellij+all
