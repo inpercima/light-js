@@ -15,7 +15,7 @@
     "rewire": "7.0.0"
   },
   "engines": {
-    "node": ">=22.11.0"
+    "node": ">=22.13.1"
   },
   "files": [
     "index.js"
