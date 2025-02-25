@@ -2,7 +2,7 @@ name: Publish
 
 on:
   release:
-    types: [ created ]
+    types: [created]
 
 jobs:
   publish:
@@ -11,22 +11,22 @@ jobs:
       matrix:
         node-version: [22]
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: Install pnpm
-      uses: pnpm/action-setup@v4
-      with:
-        version: 9
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18.x'
-        registry-url: 'https://npm.pkg.github.com'
-        scope: '@inpercima'
-        cache: 'pnpm'
-    - name: Install
-      run: pnpm install
-    - name: Deploy
-      run: pnpm publish
-      env:
-        NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18.x"
+          registry-url: "https://npm.pkg.github.com"
+          scope: "@inpercima"
+          cache: "pnpm"
+      - name: Install
+        run: pnpm install
+      - name: Deploy
+        run: pnpm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
