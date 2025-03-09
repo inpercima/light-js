@@ -8,7 +8,7 @@
   "dependencies": {
     "colors": "1.4.0",
     "replace": "1.2.2",
-    "shelljs": "0.8.5"
+    "shelljs": "0.9.1"
   },
   "devDependencies": {
     "mocha": "11.1.0",
