@@ -12,7 +12,7 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 * `node 22.14.0` or higher in combination with
   * `npm 10.9.2` or higher or
-  * `pnpm 10.4.2` or higher, used in this repository
+  * `pnpm 10.6.1` or higher, used in this repository
 
 ## Getting started
 
