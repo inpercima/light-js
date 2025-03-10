@@ -2,7 +2,7 @@
 
 /* requirements */
 const colors = require('colors');
-const fs = require('fs');
+const fs = require('node:fs');
 const replace = require('replace');
 const shjs = require('shelljs');
 
@@ -98,7 +98,7 @@ function writeFile(filename, data) {
 }
 
 function replacement(regex, replacement, path, silent = true, recursive = false, exclude = '') {
-  replace({ regex: regex, replacement: replacement, paths: path, silent: silent, recursive: recursive, exclude: exclude });
+  replace({ regex, replacement, paths: path, silent, recursive, exclude });
 }
 
 lightjs.readJson = readJson;
