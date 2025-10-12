@@ -8,11 +8,11 @@
   "dependencies": {
     "colors": "1.4.0",
     "replace-in-file": "8.3.0",
-    "shelljs": "0.9.1"
+    "shelljs": "0.10.0"
   },
   "devDependencies": {
-    "mocha": "11.1.0",
-    "rewire": "7.0.0"
+    "mocha": "11.7.4",
+    "rewire": "9.0.1"
   },
   "engines": {
     "node": ">=22.14.0"
