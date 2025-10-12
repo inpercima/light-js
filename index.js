@@ -3,7 +3,7 @@
 /* requirements */
 const colors = require('colors');
 const fs = require('node:fs');
-const replace = require('replace');
+const replaceInFile = require('replace-in-file');
 const shjs = require('shelljs');
 
 const lightjs = {};
@@ -97,8 +97,8 @@ function writeFile(filename, data) {
   fs.writeFileSync(filename, data);
 }
 
-function replacement(regex, replacement, path, silent = true, recursive = false, exclude = '') {
-  replace({ regex, replacement, paths: path, silent, recursive, exclude });
+function replacement(regex, replacement, path) {
+  replaceInFile.replaceInFileSync({ from: regex, to: replacement, files: path });
 }
 
 lightjs.readJson = readJson;
