@@ -20,13 +20,13 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
-          node-version: "18.x"
+          node-version: ${{ matrix.node-version }}
           registry-url: "https://npm.pkg.github.com"
           scope: "@inpercima"
           cache: "pnpm"
       - name: Install
         run: pnpm install
       - name: Deploy
-        run: pnpm publish
+        run: pnpm publish --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
