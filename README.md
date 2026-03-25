@@ -4,7 +4,7 @@
 ![Release Version](https://img.shields.io/github/v/release/inpercima/light-js)
 [![Node CI](https://github.com/inpercima/light-js/actions/workflows/ci.yml/badge.svg)](https://github.com/inpercima/light-js/actions/workflows/ci.yml)
 
-Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [replace](https://github.com/ALMaclaine/replace).
+Simple utils working with fs, [execa](https://github.com/sindresorhus/execa) and [replace](https://github.com/ALMaclaine/replace).
 
 ## Prerequisites
 
@@ -49,6 +49,7 @@ const lightjs = require('light-js');
 * [warn(message)](#warnmessage)
 * [yarnpm(arguments)](#yarnpmarguments)
 * [exec(command [, arguments] [, fail])](#execcommand--arguments--fail)
+* [execAsync(command [, arguments] [, fail])](#execasynccommand--arguments--fail)
 * [readJson(filename)](#readjsonfilename)
 * [replacement(regex, replacement, paths [, silent] [, recursive] [, exclude])](#replacementregex-replacement-paths--silent--recursive--exclude)
 * [writeJson(filename, data)](#writejsonfilename-data)
@@ -112,7 +113,7 @@ lightjs.yarnpm('run build');
 
 ### `exec(command [, arguments] [, fail])`
 
-Run a command with arguments.
+Run a command with arguments synchronously.
 You can specify if the script should fail if the command does not exist.
 
 * `command` a command to run
@@ -129,6 +130,23 @@ lightjs.exec('yarn', '-v', false);
 lightjs.exec('not-existing-command', 'arguments', false);
 
 lightjs.exec('another-not-existing-command', 'arguments');
+```
+
+### `execAsync(command [, arguments] [, fail])`
+
+Run a command with arguments asynchronously (returns a Promise).
+Same semantics as `exec` but non-blocking.
+
+* `command` a command to run
+* `arguments` everything what can run in the specify command
+  * optional
+* `fail` true if the scripts should fail otherwise false
+  * optional
+  * default: true
+
+```javascript
+await lightjs.execAsync('docker', '-v', false);
+await lightjs.execAsync('yarn', '-v', false);
 ```
 
 ### `readJson(filename)`
