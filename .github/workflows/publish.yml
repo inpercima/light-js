@@ -7,25 +7,27 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [22]
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
-      - name: Install pnpm
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 10
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+          version: 11
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 24.16
           registry-url: "https://npm.pkg.github.com"
           scope: "@inpercima"
           cache: "pnpm"
+
       - name: Install
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+
       - name: Deploy
         run: pnpm publish --no-git-checks
         env:

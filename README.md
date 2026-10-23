@@ -2,7 +2,7 @@
 
 [![MIT license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.md)
 ![Release Version](https://img.shields.io/github/v/release/inpercima/light-js)
-[![Node CI](https://github.com/inpercima/light-js/actions/workflows/ci.yml/badge.svg)](https://github.com/inpercima/light-js/actions/workflows/ci.yml)
+![Github Action](https://github.com/inpercima/light-js/workflows/Node%20CI/badge.svg)
 
 Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and [replace](https://github.com/ALMaclaine/replace).
 
@@ -10,9 +10,9 @@ Simple utils working with fs, [shelljs](https://github.com/shelljs/shelljs) and 
 
 ### Node, npm or pnpm
 
-* `node 22.20.0` or higher in combination with
-  * `npm 10.9.3` or higher or
-  * `pnpm 10.18.2` or higher, used in this repository
+* `node 24.16.0` or higher in combination with
+  * `npm 11.13.0` or higher or
+  * `pnpm 11.24.0` or higher, used in this repository
 
 ## Getting started
 
@@ -160,7 +160,7 @@ Replaces a string or a regex in specific files, recursive or not with silent mod
 
 ```javascript
 lightjs.replacement('loginForm', `anotherForm`, ['path/to/file']);
-lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir'], false });
+lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir'], false);
 lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir1', 'path/to/dir2'], false, true);
 lightjs.replacement('loginForm', `anotherForm`, ['path/to/dir1', 'path/to/dir2'], false, true, 'node_modules');
 ```
